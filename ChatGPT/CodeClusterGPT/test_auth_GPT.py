@@ -9,13 +9,13 @@ class User:
         self.username = username
         self.password = password
 
-def authenticate(username, password):
+def test_authenticate(username, password):
     for user in users:
         if user.username == username and user.password == password:
             return True
     return False
 
-def register_user(username, password):
+def test_register_user(username, password):
     for user in users:
         if user.username == username:
             return False

@@ -1,12 +1,12 @@
 import tkinter as tk
-from auth_GPT import authenticate, register_user
-from user_profile_GPT import UserProfile
+from test_auth_GPT import test_authenticate, test_register_user
+from test_user_profile_GPT import UserProfile
 
 def login():
     username = username_entry.get()
     password = password_entry.get()
 
-    if authenticate(username, password):
+    if test_authenticate(username, password):
         result_label.config(text="Login successful")
     else:
         result_label.config(text="Invalid credentials")
@@ -15,7 +15,7 @@ def register():
     username = username_entry.get()
     password = password_entry.get()
 
-    if register_user(username, password):
+    if test_register_user(username, password):
         result_label.config(text="Registration successful")
     else:
         result_label.config(text="Username already exists. Please choose a different username.")
